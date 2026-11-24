@@ -60,8 +60,9 @@ so it is enough to check the corners of the probability simplex: one matrix per 
 four-point distance can be written as a sum of "cuts", and the corner conditions become seven polynomials with only
 positive coefficients.
 
-**Limits.** Failures are rare and usually tiny: the five-outcome example fails only for edge similarities in a window
-of width about 0.033, by about 0.0003 nats, and none of 2000 seeded random five-outcome examples failed (a numerical
+**Limits.** Failures are rare and usually tiny: the five-outcome example fails throughout a window of edge similarities
+of width about 0.033 just below the positive definiteness threshold, by about 0.0003 nats at a = 12/17, and the exact
+test finds no failure on a grid below that window; none of 2000 seeded random five-outcome examples failed (a numerical
 observation, not a certificate). The worst case nevertheless grows with the number of outcomes. The four-outcome step
 rests on an exact computer certificate, not a conceptual proof. Several equivalences (concavity, nonnegative expected
 information gain, proper scoring) were already noted by Miller and by GAIT and are credited in the paper. The
