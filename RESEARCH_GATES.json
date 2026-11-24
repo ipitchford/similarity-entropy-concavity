@@ -1,0 +1,291 @@
+{
+ "schemaVersion": "1.0",
+ "provenance": "Compiled 24 November 2026 for 0.1.0-candidate from the dated searches of the internal AI-assisted review (24 November 2026), the source retrieval and reading record, the corpus overlap check, refs.bib, REVIEW_SUMMARY.md and the paper's own positioning (Section 1). It records scrutiny performed, not historical priority.",
+ "contributionMap": [
+  {
+   "claim": "Finite test: H_K is concave iff the reduced matrix is positive definite and one explicit vertex matrix per state is positive semidefinite; strict concavity on reduced laws",
+   "unit": "statement",
+   "paperLocation": "Theorem 1; Section 3",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv and Semantic Scholar, by the domain reviewer",
+     "query": "similarity-sensitive entropy with concave or concavity; Leinster-Cobbold entropy concavity; GAIT entropy conjecture; reduced entropy Bavaud; minimum number of states for Miller's question (only Miller's own versions returned); four-point positive definite metric spaces (Meckes 2013; Gomi arXiv:2310.20690 found and checked)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the eleven cited works, all obtained and read (Leinster-Cobbold 2012, GAIT 2020 with supplement, Bavaud 2022, Miller 2026 v3, Ricotta-Szeidl 2006, Ricotta-Szeidl-Pavoine 2021 preprint text, Meckes 2013, Leinster 2013, Botta-Dukat 2018, Reeve et al. v3, Deza-Laurent for the cut decomposition)",
+     "query": "Hessian and conjecture (GAIT Def. 2, Conj. 1, Supp. C); Bavaud's question (Sec. 6), Thms 6c, 8, 9, 11; Miller Sec. 4.1, 6.2, Def. 3.3, Thm 4.4, App. B.1, App. E, Lemma A.1; RS 2006 Thm 2, Remark 1, App. A; RSP 2021 acknowledgement; Meckes Thm 3.6 and Sec. 3.2; Leinster Ex. 2.2.7; Botta-Dukat p. 44"
+    }
+   ],
+   "closestPriorWork": "GAIT Supplement C.2 (the Hessian); Miller Appendix B.1 (sign argument for Laplace kernels on the line); Bavaud Section 6 (question)",
+   "verdict": "new-in-bounded-search",
+   "verdictNote": "the Hessian is credited to GAIT; the affine reparametrisation and the necessary-and-sufficient vertex test were not found in the searched literature"
+  },
+  {
+   "claim": "Four is safe, five can fail: every MTI similarity of order at most four has concave entropy (exact polynomial certificate); a positive definite MTI similarity on K_{2,3} fails; this answers Miller's minimum-cardinality question",
+   "unit": "statement",
+   "paperLocation": "Theorem 4; Section 5; Table 1",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv and Semantic Scholar, by the domain reviewer",
+     "query": "similarity-sensitive entropy with concave or concavity; Leinster-Cobbold entropy concavity; GAIT entropy conjecture; reduced entropy Bavaud; minimum number of states for Miller's question (only Miller's own versions returned); four-point positive definite metric spaces (Meckes 2013; Gomi arXiv:2310.20690 found and checked)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "general web search and Crossref, by the domain reviewer; Evidence Press release corpus (site papers/ and the batch corpus list)",
+     "query": "\"similarity-sensitive\" entropy concave counterexample; Ricotta-Szeidl concavity error; Rao quadratic entropy concavity five species; partitioning similarity-sensitive diversity (Reeve et al.; Botta-Dukat); Vendi score and Leinster-Cobbold in machine learning (arXiv:2511.03849 noted)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the eleven cited works, all obtained and read (Leinster-Cobbold 2012, GAIT 2020 with supplement, Bavaud 2022, Miller 2026 v3, Ricotta-Szeidl 2006, Ricotta-Szeidl-Pavoine 2021 preprint text, Meckes 2013, Leinster 2013, Botta-Dukat 2018, Reeve et al. v3, Deza-Laurent for the cut decomposition)",
+     "query": "Hessian and conjecture (GAIT Def. 2, Conj. 1, Supp. C); Bavaud's question (Sec. 6), Thms 6c, 8, 9, 11; Miller Sec. 4.1, 6.2, Def. 3.3, Thm 4.4, App. B.1, App. E, Lemma A.1; RS 2006 Thm 2, Remark 1, App. A; RSP 2021 acknowledgement; Meckes Thm 3.6 and Sec. 3.2; Leinster Ex. 2.2.7; Botta-Dukat p. 44"
+    }
+   ],
+   "closestPriorWork": "Miller 2026 (18-state counterexample and the question); Meckes 2013 and Leinster 2013 (K_{2,3}/K_{3,2} as the five-point space that is not positive definite at the threshold)",
+   "verdict": "new-in-bounded-search",
+   "verdictNote": "no earlier answer to Miller's question was found; the five-point metric space is classical and credited"
+  },
+  {
+   "claim": "Size of failures: G <= (1/2) E H_K(P) <= (1/2) log n under PSD or MTI; sharp worst case (1/2) log n - log log n + log 2 - 1 + o(1) over PSD similarities; effective entropy within a factor two",
+   "unit": "statement",
+   "paperLocation": "Theorem 10; Remark 11; Proposition 12",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv and Semantic Scholar, by the domain reviewer",
+     "query": "similarity-sensitive entropy with concave or concavity; Leinster-Cobbold entropy concavity; GAIT entropy conjecture; reduced entropy Bavaud; minimum number of states for Miller's question (only Miller's own versions returned); four-point positive definite metric spaces (Meckes 2013; Gomi arXiv:2310.20690 found and checked)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the eleven cited works, all obtained and read (Leinster-Cobbold 2012, GAIT 2020 with supplement, Bavaud 2022, Miller 2026 v3, Ricotta-Szeidl 2006, Ricotta-Szeidl-Pavoine 2021 preprint text, Meckes 2013, Leinster 2013, Botta-Dukat 2018, Reeve et al. v3, Deza-Laurent for the cut decomposition)",
+     "query": "Hessian and conjecture (GAIT Def. 2, Conj. 1, Supp. C); Bavaud's question (Sec. 6), Thms 6c, 8, 9, 11; Miller Sec. 4.1, 6.2, Def. 3.3, Thm 4.4, App. B.1, App. E, Lemma A.1; RS 2006 Thm 2, Remark 1, App. A; RSP 2021 acknowledgement; Meckes Thm 3.6 and Sec. 3.2; Leinster Ex. 2.2.7; Botta-Dukat p. 44"
+    }
+   ],
+   "closestPriorWork": "Miller Appendix E (hub example); Bavaud Theorems 8-9 (effective entropy, always concave)",
+   "verdict": "new-in-bounded-search",
+   "verdictNote": "no quantitative bound on the entropy gain was found in the searched literature"
+  },
+  {
+   "claim": "Subadditivity under product similarities only in degenerate cases; only Rao's quadratic entropy among average-rarity indices is concave for every PD metric similarity; finite restrictions decide concavity on standard Borel spaces",
+   "unit": "statement",
+   "paperLocation": "Theorems 13, 14, 16; Corollary 15",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv and Semantic Scholar, by the domain reviewer",
+     "query": "similarity-sensitive entropy with concave or concavity; Leinster-Cobbold entropy concavity; GAIT entropy conjecture; reduced entropy Bavaud; minimum number of states for Miller's question (only Miller's own versions returned); four-point positive definite metric spaces (Meckes 2013; Gomi arXiv:2310.20690 found and checked)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "general web search and Crossref, by the domain reviewer; Evidence Press release corpus (site papers/ and the batch corpus list)",
+     "query": "\"similarity-sensitive\" entropy concave counterexample; Ricotta-Szeidl concavity error; Rao quadratic entropy concavity five species; partitioning similarity-sensitive diversity (Reeve et al.; Botta-Dukat); Vendi score and Leinster-Cobbold in machine learning (arXiv:2511.03849 noted)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the eleven cited works, all obtained and read (Leinster-Cobbold 2012, GAIT 2020 with supplement, Bavaud 2022, Miller 2026 v3, Ricotta-Szeidl 2006, Ricotta-Szeidl-Pavoine 2021 preprint text, Meckes 2013, Leinster 2013, Botta-Dukat 2018, Reeve et al. v3, Deza-Laurent for the cut decomposition)",
+     "query": "Hessian and conjecture (GAIT Def. 2, Conj. 1, Supp. C); Bavaud's question (Sec. 6), Thms 6c, 8, 9, 11; Miller Sec. 4.1, 6.2, Def. 3.3, Thm 4.4, App. B.1, App. E, Lemma A.1; RS 2006 Thm 2, Remark 1, App. A; RSP 2021 acknowledgement; Meckes Thm 3.6 and Sec. 3.2; Leinster Ex. 2.2.7; Botta-Dukat p. 44"
+    }
+   ],
+   "closestPriorWork": "Bavaud Theorem 11 (derivative at product laws; subadditivity question); Ricotta-Szeidl 2006 Theorem 2 and Ricotta-Szeidl-Pavoine 2021 (error acknowledged, numerical evidence for order two); Miller Theorem 5.2 and Lemma A.1",
+   "verdict": "partially-known-cited",
+   "verdictNote": "the questions and the numerical observation for order two are credited; the proofs and exact classifications are claimed as new"
+  },
+  {
+   "claim": "Method: changing variables from probability changes to relative typicality changes makes the curvature affine in the law, so vertex checks suffice; four-point certificate through cut decompositions and positive-coefficient polynomials",
+   "unit": "method",
+   "paperLocation": "Sections 3 and 5.2",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv and Semantic Scholar, by the domain reviewer",
+     "query": "similarity-sensitive entropy with concave or concavity; Leinster-Cobbold entropy concavity; GAIT entropy conjecture; reduced entropy Bavaud; minimum number of states for Miller's question (only Miller's own versions returned); four-point positive definite metric spaces (Meckes 2013; Gomi arXiv:2310.20690 found and checked)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the eleven cited works, all obtained and read (Leinster-Cobbold 2012, GAIT 2020 with supplement, Bavaud 2022, Miller 2026 v3, Ricotta-Szeidl 2006, Ricotta-Szeidl-Pavoine 2021 preprint text, Meckes 2013, Leinster 2013, Botta-Dukat 2018, Reeve et al. v3, Deza-Laurent for the cut decomposition)",
+     "query": "Hessian and conjecture (GAIT Def. 2, Conj. 1, Supp. C); Bavaud's question (Sec. 6), Thms 6c, 8, 9, 11; Miller Sec. 4.1, 6.2, Def. 3.3, Thm 4.4, App. B.1, App. E, Lemma A.1; RS 2006 Thm 2, Remark 1, App. A; RSP 2021 acknowledgement; Meckes Thm 3.6 and Sec. 3.2; Leinster Ex. 2.2.7; Botta-Dukat p. 44"
+    }
+   ],
+   "closestPriorWork": "GAIT Hessian; Deza-Laurent cut decomposition of four-point metrics (classical); Miller's identity for Z-matrix inverses",
+   "verdict": "partially-known-cited",
+   "verdictNote": "the classical cut decomposition and the Hessian are credited; the affine reparametrisation and the positivity certificate are the new ingredients"
+  }
+ ],
+ "sourcesReadInFull": [
+  {
+   "citation": "Leinster, T. and Cobbold, C. A. (2012), Measuring diversity: the importance of species similarity, Ecology 93(3), 477-489",
+   "usedFor": "definition of the similarity-sensitive diversity and its order-one entropy",
+   "readWhat": "whole paper (author copy)",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1890/10-2402.1"
+  },
+  {
+   "citation": "Gallego Posada, J., Vani, A., Schwarzer, M. and Lacoste-Julien, S. (2020), GAIT: a geometric approach to information theory, PMLR 108, 2601-2611",
+   "usedFor": "Definition 2 (divergence), Conjecture 1, Theorems 3-4, Supplement C (Hessian, numerical searches)",
+   "readWhat": "whole paper and supplement",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://proceedings.mlr.press/v108/posada20a.html"
+  },
+  {
+   "citation": "Bavaud, F. (2022), Similarity-reduced diversities: the effective entropy and the reduced entropy, Journal of Classification 39(1), 100-121",
+   "usedFor": "Theorems 6c, 8, 9, 11; equations (6), (13), (14); Section 6 question",
+   "readWhat": "whole paper (publisher's open HTML text, CC BY)",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1007/s00357-021-09395-4"
+  },
+  {
+   "citation": "Miller, J. S. (2026), Similarity-sensitive entropy under representation change and inference, arXiv:2601.03064v3",
+   "usedFor": "Sections 4.1, 6.1, 6.2; Definition 3.3; Theorems 4.4, 5.2; Appendices B.1, E; Lemma A.1; the minimum-cardinality question",
+   "readWhat": "whole paper, v3",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/2601.03064v3"
+  },
+  {
+   "citation": "Ricotta, C. and Szeidl, L. (2006), Towards a unifying approach to diversity measures: bridging the gap between the Shannon entropy and Rao's quadratic index, Theoretical Population Biology 70(3), 237-243",
+   "usedFor": "Theorem 1, Theorem 2, Remark 1, Appendix A",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1016/j.tpb.2006.06.003"
+  },
+  {
+   "citation": "Ricotta, C., Szeidl, L. and Pavoine, S. (2021), Towards a unifying framework for diversity and dissimilarity coefficients, Ecological Indicators 129, 107971",
+   "usedFor": "acknowledgement of the error in the 2006 concavity proof; numerical evidence for order two",
+   "readWhat": "whole paper, preprint text (bioRxiv)",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1016/j.ecolind.2021.107971"
+  },
+  {
+   "citation": "Meckes, M. W. (2013), Positive definite metric spaces, Positivity 17(3), 733-757",
+   "usedFor": "Theorem 3.6 (four-point spaces positive definite); Section 3.2 (K_{3,2} example)",
+   "readWhat": "whole paper, arXiv version",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1007/s11117-012-0202-8"
+  },
+  {
+   "citation": "Leinster, T. (2013), The magnitude of metric spaces, Documenta Mathematica 18, 857-905",
+   "usedFor": "Example 2.2.7 (K_{3,2} similarity matrix singular at 1/sqrt 2)",
+   "readWhat": "whole paper, arXiv version",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.4171/dm/415"
+  },
+  {
+   "citation": "Botta-Dukat, Z. (2018), The generalized replication principle and the partitioning of functional diversity into independent alpha and beta components, Ecography 41(1), 40-50",
+   "usedFor": "p. 44 recommendation (orders at least two with PSD similarities)",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1111/ecog.02009"
+  },
+  {
+   "citation": "Reeve, R., Leinster, T., Cobbold, C. A., Thompson, J., Brummitt, N., Mitchell, S. N. and Matthews, L. (2016), How to partition diversity, arXiv:1404.6520v3",
+   "usedFor": "partitioning framework for similarity-sensitive diversity",
+   "readWhat": "whole paper, v3",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/1404.6520v3"
+  },
+  {
+   "citation": "Deza, M. M. and Laurent, M. (1997), Geometry of Cuts and Metrics, Springer",
+   "usedFor": "classical cut decomposition of four-point metrics only; the explicit coefficients are stated in the paper and checked symbolically by check_extensions.py",
+   "readWhat": "the cited classical fact; the paper's coefficients are verified by computation",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1007/978-3-642-04295-9"
+  }
+ ],
+ "limitationTriage": [
+  {
+   "limitation": "The four-state step rests on a computer certificate",
+   "closingQuestion": "Is there a structural proof that four points are safe?",
+   "triedOrSearched": "cut-decomposition proof of positive definiteness (Lemma 5) obtained; a structural proof of the vertex tests was attempted in revision and did not land",
+   "estimatedCost": "research-level",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 12, open problem (1)",
+   "whyNotClosedNow": "two independent exact certificates are given instead"
+  },
+  {
+   "limitation": "No characterisation of failing five-state matrices",
+   "closingQuestion": "Does failure at five points require a pentagonal-inequality violation?",
+   "triedOrSearched": "reviewer numerical search over random l1 metrics on five and six points found no failure (not a certificate)",
+   "estimatedCost": "research-level",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 12, open problem (2)",
+   "whyNotClosedNow": "stated as a question"
+  },
+  {
+   "limitation": "Constant term of the worst case for PD MTI similarities with fair observations",
+   "closingQuestion": "What is the constant in sup G for PD MTI or tree similarities?",
+   "triedOrSearched": "bracket between -(5/2) log 2 - 1/2 and log 2 - 1 proved (Theorem 10(b)); effective ranges computed (Remark 11)",
+   "estimatedCost": "days",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 12, open problem (3)",
+   "whyNotClosedNow": "the bracket is stated"
+  },
+  {
+   "limitation": "Smallest failing tree",
+   "closingQuestion": "What is the smallest weighted tree with nonconcave entropy?",
+   "triedOrSearched": "equal-edge stars settled exactly (13 states); general trees open",
+   "estimatedCost": "hours to days",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 12, open problem (4)",
+   "whyNotClosedNow": "stated as open"
+  },
+  {
+   "limitation": "Rarity of failures quantified only numerically",
+   "closingQuestion": "How often do five-state PD MTI similarities fail?",
+   "triedOrSearched": "seeded experiment: 0 of 2000 random five-state PD MTI similarities fail the exact test; failure interval of width about 0.033 for K_{2,3}(a)",
+   "estimatedCost": "minutes",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Computational checks could pass vacuously under optimisation",
+   "closingQuestion": "Do the checks fail when a value is wrong?",
+   "triedOrSearched": "assert statements replaced by explicit checks that exit 1; three negative controls exit 1 under python -O",
+   "estimatedCost": "minutes",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Novelty rests on searches of limited scope",
+   "closingQuestion": "Would indexed databases change attribution?",
+   "triedOrSearched": "arXiv, Semantic Scholar, web and Crossref searches; all cited sources read; Evidence Press corpus checked",
+   "estimatedCost": "subscription indexes",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "MathSciNet and zbMATH were outside the searched corpus",
+   "whyNotClosedNow": "recorded here; the paper claims only that no earlier answer was found"
+  }
+ ],
+ "extensionScout": {
+  "by": "five internal reviewer roles (two Claude subagents) and the lead",
+  "date": "2026-11-24",
+  "proposals": [
+   "sign condition covering ultrametric similarities",
+   "comparison with Bavaud's always-concave effective entropy",
+   "explicit constant for the fair double star",
+   "practical guidance with quantified rarity of failures",
+   "parallel between the four/five threshold and Rao's quadratic entropy",
+   "structural proof of four-point safety",
+   "pentagonal characterisation at five points",
+   "order six in the rarity theorem"
+  ],
+  "actions": [
+   "done: Corollary 2",
+   "done: Proposition 12",
+   "done: Theorem 10(b)",
+   "done: Section 11",
+   "done: Remark 7",
+   "attempted, not landed; open problem (1)",
+   "not attempted; open problem (2)",
+   "not attempted; open problem (5)"
+  ]
+ }
+}

@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using these metadata."
+type: software
+title: "When mixing lowers similarity-sensitive entropy: exact concavity criteria and sharp bounds on entropy gain"
+abstract: "Unrefereed research candidate. The order-one similarity-sensitive entropy H_K(p) = -sum_i p_i log (Kp)_i measures diversity or uncertainty when outcomes are partly alike. A finite test decides its concavity for any finite similarity matrix: after identical rows are merged, the matrix must be positive definite and one explicit matrix per state positive semidefinite. For positive definite similarities satisfying the multiplicative triangle inequality, four states never permit failure and five can, answering Miller's minimum-cardinality question. If the similarity is positive semidefinite or satisfies the multiplicative triangle inequality, an observation can raise expected entropy by at most (1/2) log n, and over positive semidefinite similarities the sharp worst case is (1/2) log n - log log n + log 2 - 1 + o(1). Further results treat weighted trees, subadditivity, other average-rarity indices (only Rao's quadratic entropy is always safe) and infinite spaces."
+authors:
+  - name: "Anonymous"
+version: "0.1.0-candidate"
+date-released: "2026-11-24"
+doi: "10.5281/zenodo.24514480"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24514480"
+    description: "This version"
+  - type: doi
+    value: "10.5281/zenodo.24514479"
+    description: "All versions (concept DOI)"
+repository-code: "https://github.com/ipitchford/similarity-entropy-concavity"
+url: "https://evidencepress.org/releases/similarity-entropy-concavity/"
+license: CC0-1.0
+keywords:
+  - similarity-sensitive entropy
+  - concavity
+  - diversity
+  - information gain
+  - positive definite matrices
+  - multiplicative triangle inequality
+preferred-citation:
+  type: article
+  title: "When mixing lowers similarity-sensitive entropy: exact concavity criteria and sharp bounds on entropy gain"
+  authors:
+    - name: "Anonymous"
+  year: 2026
+  doi: "10.5281/zenodo.24514480"
+  publisher:
+    name: "Zenodo"
+  notes: "Version 0.1.0-candidate; unrefereed"

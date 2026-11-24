@@ -1,0 +1,159 @@
+{
+  "asymptotics": {
+    "fair_double_star": [
+      {
+        "G_minus_half_log_m_plus_loglog_m": -1.0758204887143394,
+        "m": "1e3",
+        "ratio_prior_to_mean_posterior": 0.9222516203937579
+      },
+      {
+        "G_minus_half_log_m_plus_loglog_m": -1.7055115616734244,
+        "m": "1e12",
+        "ratio_prior_to_mean_posterior": 0.6634177020393278
+      },
+      {
+        "G_minus_half_log_m_plus_loglog_m": -1.82844413724298,
+        "m": "1e48",
+        "ratio_prior_to_mean_posterior": 0.5524941938093324
+      },
+      {
+        "G_minus_half_log_m_plus_loglog_m": -1.854223240682364,
+        "m": "1e96",
+        "ratio_prior_to_mean_posterior": 0.5292727605959083
+      }
+    ],
+    "hub_construction": [
+      {
+        "G": 1.2884345050684067,
+        "difference": 0.07405441893345838,
+        "expansion": 1.2143800861349483,
+        "m": "1e3"
+      },
+      {
+        "G": 3.9810000669227597,
+        "difference": 0.005889521856687905,
+        "expansion": 3.9751105450660718,
+        "m": "1e6"
+      },
+      {
+        "G": 10.189731458915777,
+        "difference": 1.2815427512403806e-05,
+        "expansion": 10.189718643488263,
+        "m": "1e12"
+      },
+      {
+        "G": 23.312082020919224,
+        "difference": 2.6631021115572978e-11,
+        "expansion": 23.312082020892593,
+        "m": "1e24"
+      }
+    ],
+    "limit_constant_double_star": "-log(4)-1/2 (approx -1.886294)",
+    "tolerance": 1e-09,
+    "upper_bound_slack": [
+      {
+        "bound_minus_expansion": 1.7960971603314189,
+        "n": "1e6"
+      },
+      {
+        "bound_minus_expansion": 0.4474326893217546,
+        "n": "1e20"
+      },
+      {
+        "bound_minus_expansion": 0.10683052604709223,
+        "n": "1e100"
+      }
+    ]
+  },
+  "cut_decomposition": {
+    "pair_cut_weights": [
+      "(S1-S2)/2",
+      "(S1-S3)/2"
+    ],
+    "singleton_weights_times_two": [
+      "d02 + d03 - d23",
+      "d12 + d13 - d23",
+      "-d01 + d02 + d12",
+      "-d01 + d03 + d13"
+    ],
+    "six_distances_recovered": true
+  },
+  "five_state_family": {
+    "classifier_grid": [
+      [
+        "3/5",
+        true
+      ],
+      [
+        "61/100",
+        true
+      ],
+      [
+        "31/50",
+        true
+      ],
+      [
+        "63/100",
+        true
+      ],
+      [
+        "16/25",
+        true
+      ],
+      [
+        "13/20",
+        true
+      ],
+      [
+        "33/50",
+        true
+      ],
+      [
+        "67/100",
+        true
+      ],
+      [
+        "17/25",
+        false
+      ],
+      [
+        "69/100",
+        false
+      ],
+      [
+        "7/10",
+        false
+      ]
+    ],
+    "contrast_entry": "-2*(a - 1)*(a + 1)/a",
+    "interval_width": 0.03345870226621628,
+    "nonconcave_and_positive_definite_interval": [
+      0.6736480786466927,
+      0.7071067811865532
+    ],
+    "part_block_determinant": "(1-a^2)(1-2a^2)",
+    "root": 0.6736480786466803,
+    "schur_block_determinant": "-(1-a)^2(1+a)a^-3 (4a^5+a^4+7a^3-5a^2+5a-4)"
+  },
+  "random_five_state_mti": {
+    "accepted": 2000,
+    "attempts": 3713303,
+    "distribution": "off-diagonal entries iid uniform on {1/40,...,39/40}; kept if MTI and positive definite",
+    "nonconcave": 0,
+    "rejected_not_pd": 0,
+    "seed": 1557
+  },
+  "star_threshold": {
+    "argmin": "sqrt(2)-1",
+    "eleven_leaves_concave": true,
+    "minimum_float": 11.656854249536991,
+    "minimum_of_C": "6+4*sqrt(2)",
+    "twelve_leaves_fail": true
+  },
+  "ultrametric_sign_condition": {
+    "all_Z_matrix_nonnegative_rows": true,
+    "all_strictly_concave_by_vertex_test": true,
+    "random_kernels": 60,
+    "seed": 20261124
+  }
+}

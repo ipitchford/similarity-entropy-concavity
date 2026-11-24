@@ -1,0 +1,99 @@
+# SPDX-License-Identifier: MIT
+name: Replay
+on:
+  push:
+  pull_request:
+jobs:
+  quick:
+    name: Manifest; exact certificates under python -O compared byte for byte; three negative controls (blocking)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check MANIFEST.sha256
+        run: sha256sum -c MANIFEST.sha256
+      - name: Install SymPy for the second four-state certificate
+        run: python3 -m pip install sympy==1.14.0 mpmath==1.3.0
+      - name: Run the exact checks in copies of the package (cwd = code/)
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python3 -c 'import sys, sympy; print(sys.version); print("sympy", sympy.__version__)'
+          for d in run neg1 neg2 neg3; do mkdir -p "$RUNNER_TEMP/$d"; cp -R code results "$RUNNER_TEMP/$d/"; done
+          cd "$RUNNER_TEMP/run/code"
+          python3 -O -I -B verify.py > ../verify.txt
+          python3 -O -I -B verify_independent.py > ../verify_independent.txt
+          python3 -O -I -B verify_mixing.py > ../verify_mixing.txt
+          python3 -O -B check_classifier.py > ../check_classifier.txt
+          python3 -O -I -B classify.py five-state.json > ../classify-five-state.json
+      - name: Compare byte for byte with the recorded outputs (exact arithmetic)
+        run: |
+          for s in verify.txt verify_independent.txt verify_mixing.txt check_classifier.txt classify-five-state.json; do
+            cmp "results/$s" "$RUNNER_TEMP/run/$s"
+            echo "byte-identical: results/$s"
+          done
+      - name: Negative controls under -O
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          cd "$RUNNER_TEMP/neg1/code"
+          test "$(grep -c 'gap == F(1557, 50000000000)' check_classifier.py)" -ge 1
+          sed -i 's/gap == F(1557, 50000000000)/gap == F(1558, 50000000000)/g' check_classifier.py
+          if python3 -O -B check_classifier.py > /dev/null 2>&1; then echo "negative control 1 (order-three gap) not detected"; exit 1; fi
+          cd "$RUNNER_TEMP/neg2/code"
+          test "$(grep -c '(1, 2, 3): (15172, 8, 464400)' verify.py)" = 1
+          sed -i 's/(1, 2, 3): (15172, 8, 464400)/(1, 2, 3): (15173, 8, 464400)/' verify.py
+          if python3 -O -I -B verify.py > /dev/null 2>&1; then echo "negative control 2 (Table 1 count) not detected"; exit 1; fi
+          cd "$RUNNER_TEMP/neg3/code"
+          test "$(grep -c 'ratio == F(999949, 999364)' verify_mixing.py)" -ge 1
+          sed -i 's/ratio == F(999949, 999364)/ratio == F(999949, 999365)/g' verify_mixing.py
+          if python3 -O -I -B verify_mixing.py > /dev/null 2>&1; then echo "negative control 3 (Jensen gap ratio) not detected"; exit 1; fi
+          echo "negative controls detected"
+      - name: Working tree unchanged
+        run: test -z "$(git status --porcelain)"
+  extensions:
+    name: check_extensions.py under python -O and the figure (non-blocking)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned dependencies
+        run: python3 -m pip install -r requirements.txt
+      - name: Run check_extensions.py and figure.py in a copy of the package
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          mkdir -p "$RUNNER_TEMP/ext" && cp -R code figures results "$RUNNER_TEMP/ext/"
+          cd "$RUNNER_TEMP/ext/code"
+          python3 -O -B check_extensions.py --output ../new-extensions.json | tee ../new-extensions-output.txt
+          grep -qx 'ALL CHECKS PASSED' ../new-extensions-output.txt
+          python3 -B figure.py
+      - name: Compare extensions.json (exact values exact; floats to 1e-9 relative; interpreter fields excluded)
+        run: |
+          python3 -I - results/extensions.json "$RUNNER_TEMP/ext/new-extensions.json" <<'PY'
+          import json, math, sys
+          a, b = (json.load(open(p)) for p in sys.argv[1:3])
+          bad = []
+          def cmp(x, y, p):
+              if isinstance(x, dict) and isinstance(y, dict):
+                  if set(x) != set(y): bad.append(p + ': keys differ'); return
+                  for k in x:
+                      if p == '' and k == 'python': continue
+                      cmp(x[k], y[k], p + '.' + k)
+              elif isinstance(x, list) and isinstance(y, list):
+                  if len(x) != len(y): bad.append(p + ': length differs'); return
+                  for i, (u, v) in enumerate(zip(x, y)): cmp(u, v, '%s[%d]' % (p, i))
+              elif isinstance(x, float) or isinstance(y, float):
+                  if not (isinstance(x, (int, float)) and isinstance(y, (int, float)) and math.isclose(x, y, rel_tol=1e-9, abs_tol=1e-300)): bad.append('%s: %r vs %r' % (p, x, y))
+              elif type(x) is not type(y) or x != y: bad.append('%s: %r vs %r' % (p, x, y))
+          cmp(a, b, '')
+          if bad: print('DIFFERS', bad[:20]); sys.exit(1)
+          print('extensions.json equal under the declared policy')
+          PY

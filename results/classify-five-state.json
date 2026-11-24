@@ -1,0 +1,23 @@
+{
+  "row_classes_zero_based": [
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ]
+  ],
+  "concave": false,
+  "strictly_concave": false,
+  "reason": "Failed vertex positive-semidefiniteness test",
+  "failed_vertex_zero_based": 0
+}

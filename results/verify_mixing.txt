@@ -1,0 +1,2 @@
+Five-state twice-exponentiated Jensen gap: 999949/999364 > 1
+Double star on 2050 vertices. Exact exp(4G) > 16, hence G > log(2).

@@ -1,0 +1,2 @@
+Classifier checks passed, including 15 star threshold comparisons.
+Ricotta–Szeidl order-three five-state Jensen gap: 1557/50000000000
